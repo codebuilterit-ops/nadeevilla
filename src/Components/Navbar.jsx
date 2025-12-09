@@ -62,8 +62,10 @@ const Header = () => {
 
       {/*------------------- Mobile Menu Overlay -------------------*/}
       <div
-        className={`fixed inset-0 bg-black/50 transition-opacity duration-300 z-50 md:hidden ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`fixed inset-0 bg-black/50 transition-opacity duration-300 z-40 md:hidden pointer-events-none ${
+          isOpen
+            ? "opacity-100 visible pointer-events-auto"
+            : "opacity-0 invisible"
         }`}
         onClick={toggleMenu} // Close when clicking outside
       >
@@ -98,7 +100,6 @@ const Header = () => {
               </NavLink>
 
               <NavLink
-               
                 to="/villa"
                 onClick={toggleMenu}
                 className={({ isActive }) =>
@@ -119,7 +120,15 @@ const Header = () => {
                 About Us
               </NavLink>
 
-            
+              <NavLink
+                to="/visitingplaces"
+                onClick={toggleMenu}
+                className={({ isActive }) =>
+                  isActive ? "text-cyan-300" : "hover:text-cyan-300"
+                }
+              >
+                Travelling Places
+              </NavLink>
 
               <div className="mt-auto">
                 <button

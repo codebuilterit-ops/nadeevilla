@@ -90,7 +90,7 @@ const VisitingPlaces = () => {
               {place.title}
             </h2>
             <p className="text-gray-300 leading-relaxed text-lg">{place.description}</p>
-             <p className=" text-lg text-cyan-300 mt-8"><WhatsAppButton/></p>
+             
           </div>
           
         </div>

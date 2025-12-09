@@ -28,7 +28,7 @@ const VideoSection = ({ heroVideo }) => {
   }, []);
 
   return (
-    <div className="relative w-[200vh] h-[50vh] sm:h-[80vh] overflow-hidden bg-slate-900 items-center justify-center ml-4">
+    <div className="relative w-full h-[50vh] sm:h-[80vh] overflow-hidden bg-slate-900 items-center justify-center">
       {/* Background Video with Controls */}
       <video
         ref={videoRef}
