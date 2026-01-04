@@ -126,7 +126,7 @@ export const TravelContextProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         if (addpackage.length === 0) {
-          const response = await axios.get(`${backendUrl}/api/packages/pkgdetail`);
+          const response = await axios.get(`${backendUrl}/packages/pkgdetail`);
           const sanitizedPackages = response.data
             .filter(isValidPackage)
             .map((pkg) => ({ ...pkg, name: sanitizePackageName(pkg.name) }));
