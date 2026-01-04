@@ -140,7 +140,7 @@ export const TravelContextProvider = ({ children }) => {
 
       try {
         if (addtrend.length === 0) {
-          const response = await axios.get(`${backendUrl}/api/trending/trenddata`);
+          const response = await axios.get(`${backendUrl}/trending/trenddata`);
           setaddtrend(response.data);
           toast.success('Trends loaded successfully');
         }

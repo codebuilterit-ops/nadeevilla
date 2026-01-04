@@ -12,7 +12,7 @@ const Trending = () => {
 
   useEffect(() => {
     axios
-      .get(`${BACKEND_URL}/api/trending/trenddata`)
+      .get(`${BACKEND_URL}/trending/trenddata`)
       .then((res) => setaddtrend(res.data))
       .catch((err) => console.error(err));
   }, [setaddtrend]);
