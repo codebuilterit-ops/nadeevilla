@@ -151,7 +151,7 @@ export const TravelContextProvider = ({ children }) => {
 
       try {
         if (addgallery.length === 0) {
-          const response = await axios.get(`${backendUrl}/api/gallery/gallerydata`);
+          const response = await axios.get(`${backendUrl}/gallery/gallerydata`);
           setaddgallery(response.data);
           toast.success('Gallery loaded successfully');
         }
