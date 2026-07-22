@@ -68,7 +68,7 @@ const isValidPackage = (pkg) => {
  */
 export const TravelContextProvider = ({ children }) => {
   const navigate = useNavigate();
-  const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000';
+  const backendUrl = import.meta.env.VITE_API_URL || 'http://localhost:4000';
 
   // Initialize states with localStorage fallback
   const [currency, setCurrency] = useState(() => localStorage.getItem('currency') || 'USD');
